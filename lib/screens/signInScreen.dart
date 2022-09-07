@@ -1,6 +1,6 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:neumorphinsm_login/screens/common_textfield.dart';
+import 'package:neumorphinsm_login/screens/signUpScreen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -143,6 +143,48 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+              ],
+            ),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (builder) => const SignUpScreen(),
+                      ),
+                    );
+                  },
+                  child: const MyTextField(
+                    textName: 'Don\'t have an account ? ',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (builder) => const SignUpScreen(),
+                      ),
+                    );
+                  },
+                  child: const MyTextField(
+                    textName: 'Sign Up',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      // color: Colors.grey,
+                    ),
+                  ),
+                )
               ],
             )
           ],
